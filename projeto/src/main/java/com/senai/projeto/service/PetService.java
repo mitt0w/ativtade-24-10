@@ -20,7 +20,7 @@ public class PetService {
 
     public PetEntity salvarPet (PetEntity pet) {
 
-        if (repository.findByEmail(pet.getClienteId()).isPresent()) {
+        if (repository.findById(pet.getId()).isPresent()) {
             throw new IllegalArgumentException("Pet já cadastrado.");
         }
         return repository.save(pet);

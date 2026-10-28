@@ -9,5 +9,5 @@ import java.util.Optional;
 
 @Repository
 public interface PetRepository extends JpaRepository<PetEntity, Long> {
-    Optional<PetEntity> findByEmail(String email);
+    Optional<PetEntity> findById(Long id);
 }

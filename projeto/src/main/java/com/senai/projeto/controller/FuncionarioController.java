@@ -10,10 +10,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
+@RestController
+@RequestMapping("/funcionario")
 public class FuncionarioController {
-    @RestController
-    @RequestMapping("/funcionario")
-    public class FuncionarioController {
         @Autowired
         private FuncionarioService service;
 
@@ -48,5 +47,4 @@ public class FuncionarioController {
             return ResponseEntity.status(HttpStatus.OK)
                     .body(Map.of("mensagem", "Funcionário excluído com sucesso!"));
         }
-    }
 }

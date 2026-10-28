@@ -16,7 +16,7 @@ public class FornecedorService {
         return repository.findAll();
     }
 
-    public FornecedorEntity salvarFornecedor (FornecedorEntity fornecedor) {
+    public FornecedorEntity salvarFornecedor(FornecedorEntity fornecedor) {
 
         if (repository.findById(fornecedor.getId()).isPresent()) {
             throw new IllegalArgumentException("Fornecedor já cadastrado.");
@@ -24,7 +24,7 @@ public class FornecedorService {
         return repository.save(fornecedor);
     }
 
-    public FornecedorEntity atualizarFornecedor (Long id, FornecedorEntity fornecedor) {
+    public FornecedorEntity atualizarFornecedor(Long id, FornecedorEntity fornecedor) {
 
         if (!repository.existsById(id))
             throw new IllegalArgumentException("Fornecedor não encontrado.");
@@ -33,7 +33,7 @@ public class FornecedorService {
         return repository.save(fornecedor);
     }
 
-    public void excluirFornecedor (Long id) {
+    public void excluirFornecedor(Long id) {
 
         if (!repository.existsById(id))
             throw new IllegalArgumentException("Fornecedor não encontrado.");

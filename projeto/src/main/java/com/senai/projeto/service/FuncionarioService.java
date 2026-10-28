@@ -16,10 +16,10 @@ public class FuncionarioService {
         return repository.findAll();
     }
 
-    public FuncionarioEntity salvarCliente(FuncionarioEntity funcionario) {
+    public FuncionarioEntity salvarFuncionario(FuncionarioEntity funcionario) {
 
         if (repository.findById(funcionario.getId()).isPresent()) {
-            throw new IllegalArgumentException("Cliente já cadastrado.");
+            throw new IllegalArgumentException("Funcionário já cadastrado.");
         }
         return repository.save(funcionario);
     }

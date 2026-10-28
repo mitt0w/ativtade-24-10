@@ -20,7 +20,7 @@ public class ProdutoService {
 
     public ProdutoEntity salvarProduto(ProdutoEntity produto) {
 
-        if (repository.findByEmail(produto.getEmail()).isPresent()) {
+        if (repository.findById(produto.getId()).isPresent()) {
             throw new IllegalArgumentException("Produto já cadastrado.");
         }
         return repository.save(produto);

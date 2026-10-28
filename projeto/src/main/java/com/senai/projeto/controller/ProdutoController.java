@@ -1,6 +1,5 @@
 package com.senai.projeto.controller;
 
-import com.senai.projeto.entity.ClienteEntity;
 import com.senai.projeto.entity.ProdutoEntity;
 import com.senai.projeto.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;

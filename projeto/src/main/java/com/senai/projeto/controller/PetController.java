@@ -1,9 +1,7 @@
 package com.senai.projeto.controller;
 
 import com.senai.projeto.entity.PetEntity;
-import com.senai.projeto.entity.ProdutoEntity;
 import com.senai.projeto.service.PetService;
-import com.senai.projeto.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

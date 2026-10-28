@@ -9,16 +9,16 @@ import org.springframework.web.bind.annotation.RestController;
 public class Welcome {
     @GetMapping
     public String bemVindo() {
-        return "Bem-vindo!";
+        return "Bem-Vindo!";
     }
 
     @GetMapping("/dev")
     public String dev() {
-        return "Desenvolvido por clrjs";
+        return "Desenvolvido por clrjs.";
     }
 
-    @GetMapping("/cursos")
-    public String cursos () {
-        return "<h1>Curso: Desenvolvimento de Sistemas</h1>";
+    @GetMapping("/curso")
+    public String curso() {
+        return "Curso: Desenvolvimento de Sistmas";
     }
 }

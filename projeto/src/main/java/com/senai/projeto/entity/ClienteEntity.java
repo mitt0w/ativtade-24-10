@@ -6,21 +6,17 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name= "tab_cliente")
+@Table(name = "tab_cliente")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+
 public class ClienteEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    @Column(nullable = false)
     private String nome;
-
-    @Column(nullable = false)
+    private String telefone;
     private String email;
-
-    @Column(nullable = false)
     private String endereco;
 }

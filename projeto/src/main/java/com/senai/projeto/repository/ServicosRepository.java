@@ -4,6 +4,9 @@ import com.senai.projeto.entity.ServicosEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface ServicosRepository extends JpaRepository<ServicosEntity, Long> {
+    Optional<ServicosEntity> findById(Long id);
 }

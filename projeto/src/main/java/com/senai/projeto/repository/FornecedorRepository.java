@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface FornecedorRepository extends JpaRepository<FornecedorRepository, Long> {
-    Optional<FornecedorEntity> findByEmail(String email);
+public interface FornecedorRepository extends JpaRepository<FornecedorEntity, Long> {
+    Optional<FornecedorEntity> findById(Long id);
 }
